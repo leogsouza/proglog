@@ -1,0 +1,14 @@
+POST http://localhost:8080
+
+{
+    "record": {
+        "value": "TGV0J3MgR2agBzEK"
+    }
+}
+
+### 
+GET http://localhost:8080
+
+{
+    "offset": 3
+}
