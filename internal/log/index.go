@@ -45,7 +45,7 @@ func newIndex(f *os.File, c Config) (*index, error) {
 }
 
 func (idx *index) Close() error {
-	if err := idx.mmap.Sync(gommap.MS_ASYNC); err != nil {
+	if err := idx.mmap.Sync(gommap.MS_SYNC); err != nil {
 		return err
 	}
 	if err := idx.file.Sync(); err != nil {
